@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.zarzadzanie.hotelem.controllers.AdminPaneControlers.EdytujPersonelController">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <ChoiceBox fx:id="wybierzButton" onAction="#wybierzButtonOnAct" onMousePressed="#wybierzButtonOnAct" prefHeight="25.0" prefWidth="125.0" />
+            <Button fx:id="zatwierdzButton" mnemonicParsing="false" onAction="#zatwierdzButtonOnAction" text="Zatwierdz" />
+         </children>
+      </VBox>
+      <VBox prefHeight="280.0" prefWidth="293.0">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <Label text="Imie :" />
+                  <Region prefHeight="25.0" prefWidth="18.0" />
+                  <TextField fx:id="imieText" disable="true" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Nazwisko :" />
+                  <TextField fx:id="nazwiskoText" disable="true" layoutX="58.0" layoutY="20.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="55.0" spacing="10.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Telefon :" />
+                  <Region prefHeight="0.0" prefWidth="3.0" />
+                  <TextField fx:id="telefonText" layoutX="58.0" layoutY="20.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="100.0" spacing="10.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Login :" />
+                  <Region prefHeight="0.0" prefWidth="12.0" />
+                  <TextField fx:id="loginText" layoutX="58.0" layoutY="20.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="145.0" spacing="10.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Haslo :" />
+                  <Region prefHeight="0.0" prefWidth="13.0" />
+                  <TextField fx:id="hasloText" layoutX="58.0" layoutY="20.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="190.0" spacing="10.0">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Admin :" />
+                  <CheckBox fx:id="adminCheckBox" mnemonicParsing="false" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

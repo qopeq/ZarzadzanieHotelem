@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="412.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.zarzadzanie.hotelem.controllers.AdminPaneControlers.UsunPokojController">
+    <top>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label text="Wybierz pokoj :" />
+                <ChoiceBox fx:id="wybierzBox" onMouseClicked="#boxHandler" prefHeight="25.0" prefWidth="214.0" />
+                <Button mnemonicParsing="false" onAction="#usunHandler" text="Usun" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </top>
+</BorderPane>

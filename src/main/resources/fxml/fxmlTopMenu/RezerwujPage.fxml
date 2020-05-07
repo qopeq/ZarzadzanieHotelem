@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.30434782608695654" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.zarzadzanie.hotelem.controllers.PaneCenterControllers.rezerwujController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="139.0" prefWidth="179.0">
+         <children>
+            <VBox prefHeight="398.0" prefWidth="179.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz date :" />
+                  <DatePicker fx:id="od_termin" promptText="Od" />
+                  <DatePicker fx:id="do_termin" layoutX="20.0" layoutY="46.0" promptText="Do" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wybierz rodzaj pokoju : " />
+                  <RadioButton fx:id="jednoosobowy" mnemonicParsing="false" text="Jednoosobowy">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="rodzaj_pokoju" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="dbl" mnemonicParsing="false" text="DBL" toggleGroup="$rodzaj_pokoju" />
+                  <RadioButton fx:id="twin" layoutX="20.0" layoutY="136.0" mnemonicParsing="false" text="TWIN" toggleGroup="$rodzaj_pokoju" />
+                  <RadioButton fx:id="trio" layoutX="20.0" layoutY="162.0" mnemonicParsing="false" text="Trzyosobowy" toggleGroup="$rodzaj_pokoju" />
+                  <Button fx:id="mainButton" mnemonicParsing="false" onAction="#mainAction" text="Zatwierdz" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="322.0" prefWidth="413.0">
+         <children>
+            <ChoiceBox fx:id="dostepmeChoiceBox" layoutX="11.0" layoutY="14.0" onMouseClicked="#dostepmeChoiceBoxRefresh" prefHeight="30.0" prefWidth="390.0" />
+            <VBox layoutX="14.0" layoutY="44.0" prefHeight="248.0" prefWidth="390.0" spacing="10.0">
+               <children>
+                  <Label text="Klient :" />
+                  <TextField fx:id="nazwaLabel" promptText="Nazwa" />
+                  <TextField fx:id="telefonLabel" promptText="Telefon" />
+                  <TextField fx:id="peselLabel" promptText="PESEL" />
+                  <TextField fx:id="kara" layoutX="10.0" layoutY="117.0" promptText="Kara" />
+                  <TextField fx:id="rabat" layoutX="10.0" layoutY="152.0" promptText="Rabat" />
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></AnchorPane>
+  </items>
+</SplitPane>
